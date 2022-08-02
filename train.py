@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import h5py
 import glob
 import matplotlib
+import pytorch_lightning as pl
 
-from UNet import *
-from UNet import TrainableUNet
+import Network
 
 #Load data 
 files_d = glob.glob('./MultiRay/density_one_*.h5')
@@ -79,7 +79,7 @@ train_loader = DataLoader(train_dataset, batch_size=1,
 test_loader = DataLoader(test_dataset, batch_size=1,
                          shuffle=False, num_workers=2)
 
-model = TrainableUNet(n_in_features=in_chan, n_out_features=out_chan, hidden=32)
+model = Network.TrainableUNet(n_in_features=in_chan, n_out_features=out_chan, hidden=32)
 
 trainer = pl.Trainer(
     gpus=1,
