@@ -3,6 +3,8 @@ import torch.nn as nn
 import pytorch_lightning as pl
 import torch.nn.functional as F
 
+# 3D addoption of the 2D U-Net in https://github.com/milesial/Pytorch-UNet.
+
 class UNet(pl.LightningModule):
     def __init__(self, n_in_features, n_out_features, hidden=4, bilinear=False):
         super(UNet, self).__init__()
