@@ -4,13 +4,6 @@ This repository contains a U-Net structure to determine the 3D attenuation coeff
 
 It was trained and tested for turbulent box simulation on ISM scales, but could possibly be adabetd to other scales aswell.
 
-<div align="center">
-
-| **colab** | 
-|---|
-|[![Colab](https://img.shields.io/badge/colab-notebook-yellow)](https://colab.research.google.com/drive/1jKbVMmtMNX1dmXycTwmpxX7EXovywDWA?usp=sharing)|
-
-</div>
 
 ## Motivation
 
